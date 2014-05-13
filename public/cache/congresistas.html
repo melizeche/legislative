@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!-- Consider specifying the language of your content by adding the `lang` attribute to <html> -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app="pmoApp" lang="es"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Congresistas - Congreso abierto</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <meta name="og:image" content="http://pa.melizeche.com/assets/congreso-abierto-og-fb-404.png">
+    <meta name="og:title" content="Congresistas - Congreso abierto">
+    <meta name="og:description" content="">
+
+    <meta name="google-site-verification" content="" />
+    <link type="text/plain" rel="author" href="http://pa.melizeche.com/humans.txt" />
+    <!-- Mobile viewport optimized: h5bp.com/viewport -->
+    <meta name="viewport" content="width=device-width">
+
+    <!-- meta for windows -->
+    <meta name="application-name" content="Congreso Abierto"/>
+    <meta name="msapplication-TileColor" content="#3e1f3e"/>
+    <meta name="msapplication-square70x70logo" content="http://pa.melizeche.com/assets/tiny-88ac7e03e54256bac0ed01de2db774fa.png"/>
+    <meta name="msapplication-square150x150logo" content="http://pa.melizeche.com/assets/square-5c50030699c382fb78027d9aa58bf534.png"/>
+    <meta name="msapplication-wide310x150logo" content="http://pa.melizeche.com/assets/wide-69c4fb4f3ca7fd053eb63e88ec9d71a4.png"/>
+    <meta name="msapplication-square310x310logo" content="http://pa.melizeche.com/assets/large-419f742cf9cbeacc56751cf1beeeb15c.png"/>
+    <!-- end meta for windows -->
+
+    <!-- meta for fullscreen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- end meta for fullscreen -->
+
+    <link href="http://pa.melizeche.com/assets/application-1e231af32179fef8f322922193da0cb2.css" media="screen" rel="stylesheet" />
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" media="screen" rel="stylesheet" />
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/chosen/1.0/chosen.min.css" media="screen" rel="stylesheet" />
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,700" media="screen" rel="stylesheet" />
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700" media="screen" rel="stylesheet" />
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" media="screen" rel="stylesheet" />
+    <link href="http://cdn.jsdelivr.net/tag-it/2.0/css/jquery.tagit.css" media="screen" rel="stylesheet" />
+
+    <link href="http://pa.melizeche.com/assets/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+    <script>window.jQuery || document.write('<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"><\/script>')</script>
+
+    <!-- scripts concatenated and minified via build script -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://pa.melizeche.com/assets/application-364e4ee7985a26e95b30110b979a9ac2.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/tag-it/2.0/js/tag-it.min.js"></script>
+    <!-- end scripts -->
+
+    <style type="text/css">
+      html {
+        position: relative;
+        min-height: 100%;
+      }
+    </style>
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="KSiaoetw1rEpzBTcO8DRhHhblME+AGwAskd1bBuiRPg=" name="csrf-token" />
+</head>
+<body>
+
+  <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="text-bar">Menú</span>
+        </button>
+        <div id='site-logo'>
+          <a href="/"><img alt="Congreso abierto" src="http://pa.melizeche.com/assets/logo-congresoabierto-7242a64b7df4c280e98e986ee0d3faee.png" /></a>
+          <div id="defci">de TEDIC <span id="beta">BETA</span></div>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/proyectos/busquedas">Proyectos de ley</a><li/>
+          <li><a href="/congresistas">Congresistas</a><li/>
+          <li><a href="/comunicaciones">Pregúntales</a><li/>
+          <li><a href="/glosarios">Glosario</a><li/>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  
+  <!-- Content -->
+  <div class='container'>
+<div class='row'>
+<div class='col-md-6'>
+<ol class='breadcrumb'>
+<li>
+<a href="/">Portada</a>
+</li>
+<li class='active'>
+Congresistas
+</li>
+</ol>
+</div>
+<div class='col-md-6'>
+<ul class='list-inline pull-right'>
+<li>
+<a class='btn-warning btn-xs' href='#' onclick='window.open("https://www.facebook.com/sharer/sharer.php?u=http://pa.melizeche.com/congresistas","facebook","width=450, height=250")'>
+<i class='fa fa-facebook'></i>
+Comparte
+</a>
+</li>
+<li>
+<a class='btn-warning btn-xs' href='#' onclick='window.open("https://twitter.com/share?url=http://pa.melizeche.com/congresistas&amp;via=ciudadanoi&amp;hashtags=ParlamentoAbierto","twitter","width=450, height=250")'>
+<i class='fa fa-twitter'></i>
+Twittea
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class='row'>
+<h2>
+Congresistas
+</h2>
+<div class='col-md-3 aside'>
+<div>
+<form accept-charset="UTF-8" action="busquedas" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+<div class='form-group'>
+<label for="name">Nombre</label>
+<select class="form-control chosen" id="congressmen" name="congressmen"><option value="">Seleccione un congresista</option><option value="Abdo Benítez, Mario">Abdo Benítez, Mario</option>
+<option value="Acevedo Quevedo, Roberto Ramón">Acevedo Quevedo, Roberto Ramón</option>
+<option value="Aguinagalde Gallinar, Nelson Darío">Aguinagalde Gallinar, Nelson Darío</option>
+<option value="Alfaro de Franco, Emilia Patricia">Alfaro de Franco, Emilia Patricia</option>
+<option value="Alfonso González, Gustavo Javier">Alfonso González, Gustavo Javier</option>
+<option value="Amarilla Cañete, Carlos Alberto">Amarilla Cañete, Carlos Alberto</option>
+<option value="Bacchetta Chiriani, Enrique Fausto">Bacchetta Chiriani, Enrique Fausto</option>
+<option value="Bogado González, Víctor Alcides">Bogado González, Víctor Alcides</option>
+<option value="Bóbeda Melgarejo, José Manuel">Bóbeda Melgarejo, José Manuel</option>
+<option value="Cardozo Jiménez, Enzo">Cardozo Jiménez, Enzo</option>
+<option value="Castiglioni Soira, Luis Alberto">Castiglioni Soira, Luis Alberto</option>
+<option value="D’Angelo “Oddball” Fritz">D’Angelo “Oddball” Fritz</option>
+<option value="Ferreiro Sanabria, Adolfo Marcellino">Ferreiro Sanabria, Adolfo Marcellino</option>
+<option value="Filizzola Pallarés, Carlos Alberto">Filizzola Pallarés, Carlos Alberto</option>
+<option value="Fonseca Legal, Blanca Beatríz">Fonseca Legal, Blanca Beatríz</option>
+<option value="Franco Gómez, Julio César Ramón">Franco Gómez, Julio César Ramón</option>
+<option value="Galaverna Delvalle, Juan Carlos Román">Galaverna Delvalle, Juan Carlos Román</option>
+<option value="Giuzzio Benítez, Arnaldo Euclides">Giuzzio Benítez, Arnaldo Euclides</option>
+<option value="González Daher, Oscar Alberto">González Daher, Oscar Alberto</option>
+<option value="Gusinky, Mirta Leonor">Gusinky, Mirta Leonor</option>
+<option value="Gómez Cáceres, Zulma Ramona">Gómez Cáceres, Zulma Ramona</option>
+<option value="Gómez Verlangieri, Ramón">Gómez Verlangieri, Ramón</option>
+<option value="Joe Bloggs">Joe Bloggs</option>
+<option value="Llano Ramos, Blas Antonio">Llano Ramos, Blas Antonio</option>
+<option value="Lugo Méndez, Fernando Armindo">Lugo Méndez, Fernando Armindo</option>
+<option value="López Perito, Miguel Ángel Ignacio">López Perito, Miguel Ángel Ignacio</option>
+<option value="Marcelo Elizeche">Marcelo Elizeche</option>
+<option value="Martínez de Portillo, Esperanza">Martínez de Portillo, Esperanza</option>
+<option value="Masi Jara, Desireé Graciela">Masi Jara, Desireé Graciela</option>
+<option value="Mignarro de González, María Blanca Lila">Mignarro de González, María Blanca Lila</option>
+<option value="Monges Espínola, Juan Darío">Monges Espínola, Juan Darío</option>
+<option value="Núñez Agüero, Carlos">Núñez Agüero, Carlos</option>
+<option value="Osorio Núñez, Derlis Ariel Alejandro">Osorio Núñez, Derlis Ariel Alejandro</option>
+<option value="Ovelar Benítez, Silvio Adalberto">Ovelar Benítez, Silvio Adalberto</option>
+<option value="Ovelar de Duarte, Blanca Margarita">Ovelar de Duarte, Blanca Margarita</option>
+<option value="Oviedo Matto, Jorge Antonio">Oviedo Matto, Jorge Antonio</option>
+<option value="Pereira Galeano, Sixto">Pereira Galeano, Sixto</option>
+<option value="Petta San Martín, Eduardo Romalino">Petta San Martín, Eduardo Romalino</option>
+<option value="Quiñónez Daiub, Julio Antonio">Quiñónez Daiub, Julio Antonio</option>
+<option value="Richer Florentín, Oscar Hugo">Richer Florentín, Oscar Hugo</option>
+<option value="Saguier Carmona, Miguel Abdón">Saguier Carmona, Miguel Abdón</option>
+<option value="Salomón Fernández, Oscar Rubén">Salomón Fernández, Oscar Rubén</option>
+<option value="Samaniego González, Lilian Graciela">Samaniego González, Lilian Graciela</option>
+<option value="Santa Cruz Insaurralde, Pedro Arthuro">Santa Cruz Insaurralde, Pedro Arthuro</option>
+<option value="Silva Facetti, Fernando Alberto">Silva Facetti, Fernando Alberto</option>
+<option value="Velázquez Tillería, Julio César">Velázquez Tillería, Julio César</option>
+<option value="Wagner Lezcano, Luis Alberto Cayetano">Wagner Lezcano, Luis Alberto Cayetano</option>
+<option value="Wiens Durksen, Arnoldo">Wiens Durksen, Arnoldo</option></select>
+</div>
+<div class='form-group'>
+<label for="zone">Zona</label>
+<input class="form-control" id="zone" name="zone" onfocus="ga(&#39;send&#39;,&#39;congressmen_filters&#39;,&#39;focus_zone&#39;)" placeholder="Ingrese una comuna o región" type="text" />
+</div>
+<div class='form-group'>
+<label for="chamber">Cámara</label>
+<select class='form-control' name='chamber' onfocus="ga('send','congressmen_filters','focus_chamber')">
+<option value=''>Todas las cámaras</option>
+<option value='Diputado'>Cámara de diputados</option>
+<option value='Senador'>Senado</option>
+</select>
+</div>
+<div class='form-group'>
+<label for="organizations">Partido</label>
+<select class="form-control" id="organizations" name="organizations"><option value="">Seleccione un partido político</option><option value="ANR">ANR</option>
+<option value="PLRA">PLRA</option>
+<option value="UNACE">UNACE</option>
+<option value="PEN">PEN</option>
+<option value="FG">FG</option></select>
+</div>
+<input name='congressmen' type='hidden' value='2'>
+<button class='btn btn-primary pull-right btn-lg'>
+Buscar
+</button>
+</form>
+
+<script>
+  $(document).ready(function(){
+    $(".chosen").chosen();
+  });
+</script>
+
+</div>
+</div>
+<div class='col-md-9 whitewithaside'>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Abdo+benitez+mario" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Abdo+Benitez+Mario-09e49d181333d3329b20b60253a0bbe3.jpg" />
+<img alt="Abdo+benitez+mario" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Abdo+Benitez+Mario-09e49d181333d3329b20b60253a0bbe3.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a8795b0c507183fa7fbe5">Abdo Benítez, Mario</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a8795b0c507183fa7fbe5"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Acevedo+quevedo+roberto+ramon" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Acevedo+Quevedo+Roberto+Ramon-4ddf2f37452dc0b294b2d2ae41b9419f.jpg" />
+<img alt="Acevedo+quevedo+roberto+ramon" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Acevedo+Quevedo+Roberto+Ramon-4ddf2f37452dc0b294b2d2ae41b9419f.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a8797b0c507183fa7fbe7">Acevedo Quevedo, Roberto Ramón</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a8797b0c507183fa7fbe7"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Aguinagalde+gallinar+nelson+dario" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Aguinagalde+Gallinar+Nelson+Dario-5604dc343cb38730dab836101d09a2ed.jpg" />
+<img alt="Aguinagalde+gallinar+nelson+dario" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Aguinagalde+Gallinar+Nelson+Dario-5604dc343cb38730dab836101d09a2ed.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a8798b0c507183fa7fbe9">Aguinagalde Gallinar, Nelson Darío</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a8798b0c507183fa7fbe9"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Alfaro+de+franco+emilia+patricia" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Alfaro+de+Franco+Emilia+Patricia-8b7b47f3d756b64d56f2d2268ef28ba9.jpg" />
+<img alt="Alfaro+de+franco+emilia+patricia" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Alfaro+de+Franco+Emilia+Patricia-8b7b47f3d756b64d56f2d2268ef28ba9.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a8799b0c507183fa7fbeb">Alfaro de Franco, Emilia Patricia</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a8799b0c507183fa7fbeb"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Alfonso+gonzalez+gustavo+javier" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Alfonso+Gonzalez+Gustavo+Javier-1a321a36f57720d132c202f1990cc2a5.jpg" />
+<img alt="Alfonso+gonzalez+gustavo+javier" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Alfonso+Gonzalez+Gustavo+Javier-1a321a36f57720d132c202f1990cc2a5.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a879ab0c507183fa7fbed">Alfonso González, Gustavo Javier</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a879ab0c507183fa7fbed"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Amarilla+canete+carlos+alberto" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Amarilla+Canete+Carlos+Alberto-22d1c4e7ba603f4552ab3cbec7bda8a0.jpg" />
+<img alt="Amarilla+canete+carlos+alberto" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Amarilla+Canete+Carlos+Alberto-22d1c4e7ba603f4552ab3cbec7bda8a0.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a879cb0c507183fa7fbef">Amarilla Cañete, Carlos Alberto</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a879cb0c507183fa7fbef"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Bacchetta+chiriani+enrique+fausto" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Bacchetta+Chiriani+Enrique+Fausto-44c3b866fb91bd98a372435afe3b9d94.jpg" />
+<img alt="Bacchetta+chiriani+enrique+fausto" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Bacchetta+Chiriani+Enrique+Fausto-44c3b866fb91bd98a372435afe3b9d94.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a879db0c507183fa7fbf1">Bacchetta Chiriani, Enrique Fausto</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a879db0c507183fa7fbf1"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Bogado+gonzalez+victor+alcides" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Bogado+Gonzalez+Victor+Alcides-2188b8fb5b11ba6c775da5ab48ab4969.jpg" />
+<img alt="Bogado+gonzalez+victor+alcides" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Bogado+Gonzalez+Victor+Alcides-2188b8fb5b11ba6c775da5ab48ab4969.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a879fb0c507183fa7fbf5">Bogado González, Víctor Alcides</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a879fb0c507183fa7fbf5"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Bobeda+melgarejo+jose+manuel" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Bobeda+Melgarejo+Jose+Manuel-4aea5fcab1056b46bbcba5370c8fa90e.jpg" />
+<img alt="Bobeda+melgarejo+jose+manuel" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Bobeda+Melgarejo+Jose+Manuel-4aea5fcab1056b46bbcba5370c8fa90e.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a879eb0c507183fa7fbf3">Bóbeda Melgarejo, José Manuel</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a879eb0c507183fa7fbf3"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Cardozo+jimenez+enzo" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Cardozo+Jimenez+Enzo-11a1c0b176e74b232b28fc9a334af0df.jpg" />
+<img alt="Cardozo+jimenez+enzo" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Cardozo+Jimenez+Enzo-11a1c0b176e74b232b28fc9a334af0df.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87a0b0c507183fa7fbf7">Cardozo Jiménez, Enzo</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87a0b0c507183fa7fbf7"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Castiglioni+soira+luis+alberto" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Castiglioni+Soira+Luis+Alberto-89b644bd77cd164052427bd9972dee1f.jpg" />
+<img alt="Castiglioni+soira+luis+alberto" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Castiglioni+Soira+Luis+Alberto-89b644bd77cd164052427bd9972dee1f.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87a1b0c507183fa7fbf9">Castiglioni Soira, Luis Alberto</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87a1b0c507183fa7fbf9"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Default profile" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/default-profile-e5d9c08312a548a6ac2f9bd7d102e613.png" />
+<img alt="Default profile" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/default-profile-e5d9c08312a548a6ac2f9bd7d102e613.png" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535eb3541e20bd4a0394f9dd">D’Angelo “Oddball” Fritz</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535eb3541e20bd4a0394f9dd"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Ferreiro+sanabria+adolfo+marcellino" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Ferreiro+Sanabria+Adolfo+Marcellino-978295916cd62d39def938afdd86055e.jpg" />
+<img alt="Ferreiro+sanabria+adolfo+marcellino" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Ferreiro+Sanabria+Adolfo+Marcellino-978295916cd62d39def938afdd86055e.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87a2b0c507183fa7fbfb">Ferreiro Sanabria, Adolfo Marcellino</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87a2b0c507183fa7fbfb"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Filizzola+pallares+carlos+alberto" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Filizzola+Pallares+Carlos+Alberto-d812e5796f5510b6570d64beb6209bc9.jpg" />
+<img alt="Filizzola+pallares+carlos+alberto" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Filizzola+Pallares+Carlos+Alberto-d812e5796f5510b6570d64beb6209bc9.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87a3b0c507183fa7fbfd">Filizzola Pallarés, Carlos Alberto</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87a3b0c507183fa7fbfd"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Fonseca+legal+blanca+beatriz" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Fonseca+Legal+Blanca+Beatriz-e8b1db615273ccef1273c44a14fcc954.jpg" />
+<img alt="Fonseca+legal+blanca+beatriz" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Fonseca+Legal+Blanca+Beatriz-e8b1db615273ccef1273c44a14fcc954.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87a4b0c507183fa7fbff">Fonseca Legal, Blanca Beatríz</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87a4b0c507183fa7fbff"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Franco+gomez+julio+cesar+ramon" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Franco+Gomez+Julio+Cesar+Ramon-e0ef618b152501903d747c0aefef03d6.jpg" />
+<img alt="Franco+gomez+julio+cesar+ramon" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Franco+Gomez+Julio+Cesar+Ramon-e0ef618b152501903d747c0aefef03d6.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87a5b0c507183fa7fc01">Franco Gómez, Julio César Ramón</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87a5b0c507183fa7fc01"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Galaverna+delvalle+juan+carlos+roman" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Galaverna+Delvalle+Juan+Carlos+Roman-0d9f10e563f6c47533bbaa648eb5787a.jpg" />
+<img alt="Galaverna+delvalle+juan+carlos+roman" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Galaverna+Delvalle+Juan+Carlos+Roman-0d9f10e563f6c47533bbaa648eb5787a.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87a7b0c507183fa7fc03">Galaverna Delvalle, Juan Carlos Román</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87a7b0c507183fa7fc03"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Giuzzio+benitez+arnaldo+euclides" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Giuzzio+Benitez+Arnaldo+Euclides-e751915a5be440961de8414395d0b9c1.jpg" />
+<img alt="Giuzzio+benitez+arnaldo+euclides" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Giuzzio+Benitez+Arnaldo+Euclides-e751915a5be440961de8414395d0b9c1.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87a7b0c507183fa7fc05">Giuzzio Benítez, Arnaldo Euclides</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87a7b0c507183fa7fc05"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Gonzalez+daher+oscar+alberto" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Gonzalez+Daher+Oscar+Alberto-067685bf55e06afb8368f1be5a54d06c.jpg" />
+<img alt="Gonzalez+daher+oscar+alberto" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Gonzalez+Daher+Oscar+Alberto-067685bf55e06afb8368f1be5a54d06c.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87abb0c507183fa7fc0b">González Daher, Oscar Alberto</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87abb0c507183fa7fc0b"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Gusinky+mirta+leonor" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Gusinky+Mirta+Leonor-a6dc14ef278a2ce71c30f35bba2848fb.jpg" />
+<img alt="Gusinky+mirta+leonor" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Gusinky+Mirta+Leonor-a6dc14ef278a2ce71c30f35bba2848fb.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87adb0c507183fa7fc0d">Gusinky, Mirta Leonor</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87adb0c507183fa7fc0d"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Gomez+caceres+zulma+ramona" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Gomez+Caceres+Zulma+Ramona-5d8e6d08de87a10cb6d7ff8fde4445cd.jpg" />
+<img alt="Gomez+caceres+zulma+ramona" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Gomez+Caceres+Zulma+Ramona-5d8e6d08de87a10cb6d7ff8fde4445cd.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87a9b0c507183fa7fc07">Gómez Cáceres, Zulma Ramona</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87a9b0c507183fa7fc07"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Gomez+verlangieri+ramon" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Gomez+Verlangieri+Ramon-5b74727c7b41327b4d2bda0f1e5a6c34.jpg" />
+<img alt="Gomez+verlangieri+ramon" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Gomez+Verlangieri+Ramon-5b74727c7b41327b4d2bda0f1e5a6c34.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87aab0c507183fa7fc09">Gómez Verlangieri, Ramón</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87aab0c507183fa7fc09"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Default profile" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/default-profile-e5d9c08312a548a6ac2f9bd7d102e613.png" />
+<img alt="Default profile" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/default-profile-e5d9c08312a548a6ac2f9bd7d102e613.png" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535eb3541e20bd4a0394f9da">Joe Bloggs</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535eb3541e20bd4a0394f9da"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Llano+ramos+blas+antonio" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Llano+Ramos+Blas+Antonio-b716422a2747654c6225e28cc2f66a25.jpg" />
+<img alt="Llano+ramos+blas+antonio" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Llano+Ramos+Blas+Antonio-b716422a2747654c6225e28cc2f66a25.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87aeb0c507183fa7fc0f">Llano Ramos, Blas Antonio</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87aeb0c507183fa7fc0f"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Lugo+mendez+fernando+armindo" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Lugo+Mendez+Fernando+Armindo-06288e11299089216e9825209d11a1d7.jpg" />
+<img alt="Lugo+mendez+fernando+armindo" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Lugo+Mendez+Fernando+Armindo-06288e11299089216e9825209d11a1d7.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87b0b0c507183fa7fc13">Lugo Méndez, Fernando Armindo</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87b0b0c507183fa7fc13"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Lopez+perito+miguel+angel+ignacio" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Lopez+Perito+Miguel+Angel+Ignacio-098491e9b7ca7f1a2278ab3c40d2aada.jpg" />
+<img alt="Lopez+perito+miguel+angel+ignacio" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Lopez+Perito+Miguel+Angel+Ignacio-098491e9b7ca7f1a2278ab3c40d2aada.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87afb0c507183fa7fc11">López Perito, Miguel Ángel Ignacio</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87afb0c507183fa7fc11"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Default profile" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/default-profile-e5d9c08312a548a6ac2f9bd7d102e613.png" />
+<img alt="Default profile" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/default-profile-e5d9c08312a548a6ac2f9bd7d102e613.png" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/536aa39080ae7733325b0445">Marcelo Elizeche</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=536aa39080ae7733325b0445"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Martinez+de+portillo+esperanza" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Martinez+de+Portillo+Esperanza-671deda682394929010ba4b9e530438e.jpg" />
+<img alt="Martinez+de+portillo+esperanza" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Martinez+de+Portillo+Esperanza-671deda682394929010ba4b9e530438e.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87b2b0c507183fa7fc15">Martínez de Portillo, Esperanza</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87b2b0c507183fa7fc15"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Masi+jara+desiree+graciela" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Masi+Jara+Desiree+Graciela-f48a5e3f4641efd7fce0f8e2c33603e9.jpg" />
+<img alt="Masi+jara+desiree+graciela" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Masi+Jara+Desiree+Graciela-f48a5e3f4641efd7fce0f8e2c33603e9.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87b3b0c507183fa7fc17">Masi Jara, Desireé Graciela</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87b3b0c507183fa7fc17"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Mignarro+de+gonzalez+maria+blanca+lila" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Mignarro+de+Gonzalez+Maria+Blanca+Lila-77878a61339418b0eb15490cd1f56952.jpg" />
+<img alt="Mignarro+de+gonzalez+maria+blanca+lila" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Mignarro+de+Gonzalez+Maria+Blanca+Lila-77878a61339418b0eb15490cd1f56952.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87b4b0c507183fa7fc19">Mignarro de González, María Blanca Lila</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87b4b0c507183fa7fc19"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Monges+espinola+juan+dario" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Monges+Espinola+Juan+Dario-9bc92eece346aa0daf1a73bde683292e.jpg" />
+<img alt="Monges+espinola+juan+dario" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Monges+Espinola+Juan+Dario-9bc92eece346aa0daf1a73bde683292e.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87b5b0c507183fa7fc1b">Monges Espínola, Juan Darío</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87b5b0c507183fa7fc1b"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Nunez+aguero+carlos" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Nunez+Aguero+Carlos-41b6c23105b70c80087e274d10ffaced.jpg" />
+<img alt="Nunez+aguero+carlos" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Nunez+Aguero+Carlos-41b6c23105b70c80087e274d10ffaced.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87b7b0c507183fa7fc1d">Núñez Agüero, Carlos</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87b7b0c507183fa7fc1d"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Osorio+nunez+derlis+ariel+alejandro" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Osorio+Nunez+Derlis+Ariel+Alejandro-cbd3a9ba588caea7aa2f278d576081e2.jpg" />
+<img alt="Osorio+nunez+derlis+ariel+alejandro" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Osorio+Nunez+Derlis+Ariel+Alejandro-cbd3a9ba588caea7aa2f278d576081e2.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87b8b0c507183fa7fc1f">Osorio Núñez, Derlis Ariel Alejandro</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87b8b0c507183fa7fc1f"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Ovelar+benitez+silvio+adalberto" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Ovelar+Benitez+Silvio+Adalberto-35983913f5883b0cc4459b1a60ddc437.jpg" />
+<img alt="Ovelar+benitez+silvio+adalberto" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Ovelar+Benitez+Silvio+Adalberto-35983913f5883b0cc4459b1a60ddc437.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87b9b0c507183fa7fc21">Ovelar Benítez, Silvio Adalberto</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87b9b0c507183fa7fc21"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Ovelar+de+duarte+blanca+margarita" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Ovelar+de+Duarte+Blanca+Margarita-bdd8d9d5237271a4d5ee2cc30b84c845.jpg" />
+<img alt="Ovelar+de+duarte+blanca+margarita" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Ovelar+de+Duarte+Blanca+Margarita-bdd8d9d5237271a4d5ee2cc30b84c845.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87bbb0c507183fa7fc23">Ovelar de Duarte, Blanca Margarita</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87bbb0c507183fa7fc23"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Oviedo+matto+jorge+antonio" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Oviedo+Matto+Jorge+Antonio-376d7e4216a170c19c499482115813ff.jpg" />
+<img alt="Oviedo+matto+jorge+antonio" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Oviedo+Matto+Jorge+Antonio-376d7e4216a170c19c499482115813ff.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87bcb0c507183fa7fc25">Oviedo Matto, Jorge Antonio</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87bcb0c507183fa7fc25"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Pereira+galeano+sixto" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Pereira+Galeano+Sixto-d57ae9cc1c0a8d5f2e2e2becc7469e09.jpg" />
+<img alt="Pereira+galeano+sixto" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Pereira+Galeano+Sixto-d57ae9cc1c0a8d5f2e2e2becc7469e09.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87c9b0c507183fa7fc27">Pereira Galeano, Sixto</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87c9b0c507183fa7fc27"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Petta+san+martin+eduardo+romalino" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Petta+San+Martin+Eduardo+Romalino-0ea6f352120a54dc0fd73af36339552a.jpg" />
+<img alt="Petta+san+martin+eduardo+romalino" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Petta+San+Martin+Eduardo+Romalino-0ea6f352120a54dc0fd73af36339552a.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87cab0c507183fa7fc29">Petta San Martín, Eduardo Romalino</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87cab0c507183fa7fc29"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Quinonez+daiub+julio+antonio" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Quinonez+Daiub+Julio+Antonio-94b62f0ae198c4aa6c485a383e799240.jpg" />
+<img alt="Quinonez+daiub+julio+antonio" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Quinonez+Daiub+Julio+Antonio-94b62f0ae198c4aa6c485a383e799240.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87cbb0c507183fa7fc2b">Quiñónez Daiub, Julio Antonio</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87cbb0c507183fa7fc2b"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Richer+florentin+oscar+hugo" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Richer+Florentin+Oscar+Hugo-84caaa8e004c1020d4b14842e1e36b86.jpg" />
+<img alt="Richer+florentin+oscar+hugo" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Richer+Florentin+Oscar+Hugo-84caaa8e004c1020d4b14842e1e36b86.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87ccb0c507183fa7fc2d">Richer Florentín, Oscar Hugo</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87ccb0c507183fa7fc2d"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Saguier+carmona+miguel+abdon" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Saguier+Carmona+Miguel+Abdon-04c5a554f7c40458ee13acb667ba9f86.jpg" />
+<img alt="Saguier+carmona+miguel+abdon" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Saguier+Carmona+Miguel+Abdon-04c5a554f7c40458ee13acb667ba9f86.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87cdb0c507183fa7fc2f">Saguier Carmona, Miguel Abdón</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87cdb0c507183fa7fc2f"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Salomon+fernandez+oscar+ruben" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Salomon+Fernandez+Oscar+Ruben-b86ad54e659f5f844ed19e1845a2c682.jpg" />
+<img alt="Salomon+fernandez+oscar+ruben" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Salomon+Fernandez+Oscar+Ruben-b86ad54e659f5f844ed19e1845a2c682.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87cfb0c507183fa7fc31">Salomón Fernández, Oscar Rubén</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87cfb0c507183fa7fc31"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Samaniego+gonzalez+lilian+graciela" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Samaniego+Gonzalez+Lilian+Graciela-58e411a4a8551a171a2c51d4500ec384.jpg" />
+<img alt="Samaniego+gonzalez+lilian+graciela" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Samaniego+Gonzalez+Lilian+Graciela-58e411a4a8551a171a2c51d4500ec384.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87d0b0c507183fa7fc33">Samaniego González, Lilian Graciela</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87d0b0c507183fa7fc33"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Santa+cruz+insaurralde+pedro+arthuro" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Santa+Cruz+Insaurralde+Pedro+Arthuro-95df2458a8704085b9c7cc3e8bc43d7e.jpg" />
+<img alt="Santa+cruz+insaurralde+pedro+arthuro" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Santa+Cruz+Insaurralde+Pedro+Arthuro-95df2458a8704085b9c7cc3e8bc43d7e.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87d1b0c507183fa7fc35">Santa Cruz Insaurralde, Pedro Arthuro</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87d1b0c507183fa7fc35"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Silva+facetti+fernando+alberto" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Silva+Facetti+Fernando+Alberto-684f7d2aa50a282a5704f3feb86580c7.jpg" />
+<img alt="Silva+facetti+fernando+alberto" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Silva+Facetti+Fernando+Alberto-684f7d2aa50a282a5704f3feb86580c7.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87d2b0c507183fa7fc37">Silva Facetti, Fernando Alberto</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87d2b0c507183fa7fc37"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Velazquez+tilleria+julio+cesar" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Velazquez+Tilleria+Julio+Cesar-2d5f5cce95f6835f8ee096e3c644dee8.jpg" />
+<img alt="Velazquez+tilleria+julio+cesar" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Velazquez+Tilleria+Julio+Cesar-2d5f5cce95f6835f8ee096e3c644dee8.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87d3b0c507183fa7fc39">Velázquez Tillería, Julio César</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87d3b0c507183fa7fc39"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Wagner+lezcano+luis+alberto+cayetano" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Wagner+Lezcano+Luis+Alberto+Cayetano-d4a5cb37bee62cbf931f4d56d7abef08.jpg" />
+<img alt="Wagner+lezcano+luis+alberto+cayetano" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Wagner+Lezcano+Luis+Alberto+Cayetano-d4a5cb37bee62cbf931f4d56d7abef08.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87d4b0c507183fa7fc3b">Wagner Lezcano, Luis Alberto Cayetano</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87d4b0c507183fa7fc3b"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='row result'>
+<div class='col-md-1'>
+<img alt="Wiens+durksen+arnoldo" class="img-circle img-responsive hidden-xs" src="http://pa.melizeche.com/assets/Wiens+Durksen+Arnoldo-e6046f478a2e6d6c6645ee06644c5fe5.jpg" />
+<img alt="Wiens+durksen+arnoldo" class="img-thumbnail img-responsive visible-xs" src="http://pa.melizeche.com/assets/Wiens+Durksen+Arnoldo-e6046f478a2e6d6c6645ee06644c5fe5.jpg" />
+</div>
+<div class='col-md-11'>
+<div class='row'>
+<div class='col-md-11'>
+<h5>
+<a href="/congresistas/535a87d5b0c507183fa7fc3d">Wiens Durksen, Arnoldo</a>
+</h5>
+<p></p>
+</div>
+<div class='col-md-1'>
+<a href="/comunicaciones?id=535a87d5b0c507183fa7fc3d"><span class='visible-xs'>
+Pregúntales
+</span>
+<i class='fa fa-envelope-o hidden-xs' title='Pregúntales'></i>
+</a></div>
+</div>
+</div>
+</div>
+<div class='pull-left'>
+</div>
+<div class='pull-right'>
+</div>
+
+</div>
+</div>
+</div>
+
+  <!-- End content -->
+
+  <div class="arregloFotter"></div>
+
+  <!-- Footer -->
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+            <ul>
+                <li><a href="https://github.com/ciudadanointeligente/legislative" target="_blank"><i class="fa fa-github-alt"></i> Revisa nuestro código en Github</a></li>
+                <li><a href="http://www.ciudadanointeligente.org/servicios/#congreso" target="_blank"><i class="fa fa-heart-o"></i> ¿Quieres tener un sitio como éste para tu congreso?</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+          <ul>
+            <li>
+              Desarrollado por <a href="http://www.ciudadanointeligente.org/" target="_blank"><img src="http://pa.melizeche.com/assets/logo-ciudadanoi.png" alt="Fundación Ciudadano Inteligente" title="Fundación Ciudadano Inteligente"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+            <ul>
+                <li><a href="tel:+56224192770"><i class="fa fa-phone"></i> +562 2 419 2770</a></li>
+                <li><a href="" class="email-prensa" target="_top"><i class="fa fa-envelope-o"></i> Contacto prensa</a></li>
+                <li><a href="http://bit.ly/17qiMkf" target="_blank"><i class="fa fa-map-marker"></i> Holanda 895, Providencia, Santiago, Chile</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End footer -->
+
+  <!-- User feedback by freshdesk -->
+  <script type="text/javascript" src="http://assets.freshdesk.com/widget/freshwidget.js"></script>
+  <script type="text/javascript">
+    FreshWidget.init("", {"queryString": "&widgetType=popup&formTitle=Dudas%2C+problemas+y+sugerencias&submitThanks=Gracias.+Con+tu+ayuda+mejoraremos+pronto.", "widgetType": "popup", "buttonType": "text", "buttonText": "¿Comentarios?", "buttonColor": "#E6E6C9", "buttonBg": "#A6A691", "alignment": "2", "offset": "235px", "submitThanks": "Gracias. Con tu ayuda mejoraremos pronto.", "formHeight": "500px", "url": "http://ciudadanoi.freshdesk.com"} );
+  </script>
+  <!-- End user feedback by freshdesk -->
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-41822715-2');  // Replace with your property ID.
+    ga('send', 'pageview');
+
+    $(document).ready(function(){
+      var pref = 'mailto:prensa',
+          suf = 'ciudadanointeligente.org',
+          subject = '?Subject=Prensa%20de%20Congreso%20abierto';
+      $('a.email-prensa').attr('href', pref+'@'+suf+subject);
+    })
+  </script>
+  <!-- End Google Analytics -->
+</body>
+</html>
