@@ -19,7 +19,7 @@ gem 'haml-rails', :group => :development
 gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '>= 2.5.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
@@ -87,7 +87,7 @@ gem 'billit_representers', '0.9.3'
 gem 'popit_representers', '0.0.15'
 gem 'writeit-rails', :git => 'git://github.com/ciudadanointeligente/writeit-rails.git'
 
-gem 'httparty'
-gem 'json'
+gem 'httparty', '>= 0.14.0'
+gem 'json', '>= 2.3.0'
 gem 'protected_attributes'
 gem 'rake', '10.1.1'
